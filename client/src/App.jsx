@@ -1,38 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Database, Layout } from 'lucide-react';
+import Navbar from './components/Navbar';
 
 const App = () => {
     return (
         <div className="min-h-screen bg-primary font-sans text-white selection:bg-cyan-500/30">
             {/* Navigation */}
-            <nav className="fixed w-full top-0 z-50 bg-primary/80 backdrop-blur-lg border-b border-white/10">
-                <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent"
-                    >
-                        Portfolio
-                    </motion.div>
-                    <ul className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
-                        {['About', 'Projects', 'Skills', 'Contact'].map((item, i) => (
-                            <motion.li
-                                key={item}
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.1 }}
-                                className="hover:text-cyan-400 cursor-pointer transition-colors"
-                            >
-                                <a href={`#${item.toLowerCase()}`}>{item}</a>
-                            </motion.li>
-                        ))}
-                    </ul>
-                </div>
-            </nav>
+            <Navbar />
 
             {/* Hero Section */}
-            <section id="about" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+            <section id="home" className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
                 {/* Background Gradients */}
                 <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px]"></div>
                 <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-[100px]"></div>
@@ -81,8 +59,8 @@ const App = () => {
                 </div>
             </section>
 
-            {/* Skills Section */}
-            <section id="skills" className="py-20 bg-secondary/30 border-y border-white/5">
+            {/* About / Skills Section */}
+            <section id="about" className="py-20 bg-secondary/30 border-y border-white/5">
                 <div className="max-w-7xl mx-auto px-6">
                     <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">Tech Stack</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
