@@ -41,7 +41,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {menuOpen && (
-                <div className="absolute top-full left-0 w-full bg-black flex flex-col items-center space-y-6 py-6 lg:hidden">
+                <div className="absolute top-full left-0 w-full bg-black flex flex-col items-left space-y-6 py-6 lg:hidden">
                     <a href="#skills" onClick={() => setMenuOpen(false)} className="text-white">
                         Skills
                     </a>

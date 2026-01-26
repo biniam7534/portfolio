@@ -1,9 +1,11 @@
 import Navbar from "./Navbar"
+import Hero from "./hero"
 
 const Main = () => {
     return (
         <main className="min-h-screen bg-[#0f172a] text-white">
             <Navbar />
+            <Hero />
 
             <section className="max-w-7xl mx-auto px-10 py-20 flex flex-col items-center text-center">
                 <h1 className="text-6xl font-black mb-6 tracking-tight">
