@@ -14,7 +14,7 @@ export default function Contact() {
                         viewport={{ once: true }}
                         className="text-5xl md:text-6xl font-black mb-4"
                     >
-                        Get In <span className="text-indigo-500">Touch</span>
+                        Contact <span className="text-indigo-500">Me</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
