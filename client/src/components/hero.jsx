@@ -31,7 +31,7 @@ const Hero = () => {
                     Building modern, responsive, and highly interactive web applications that solve real-world problems.
                 </p>
                 <button className='px-10 py-4 bg-indigo-600 rounded-full font-bold text-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:-translate-y-1'>
-                    Let's Talk
+                    Show More...
                 </button>
             </div>
 
