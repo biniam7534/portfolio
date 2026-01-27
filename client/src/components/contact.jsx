@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Illustration from '../assets/contact_illustration.png';
+import Illustration from '../assets/contact_me_custom.png';
 
 export default function Contact() {
     return (

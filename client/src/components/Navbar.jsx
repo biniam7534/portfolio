@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { BsSun } from 'react-icons/bs';
+import Logo from '../assets/logo.png';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -12,9 +13,11 @@ const Navbar = () => {
 
                 {/* Logo */}
                 <div className="flex items-center cursor-pointer group">
-                    <span className="text-xl font-bold text-white tracking-tight">
-                        Portfolio<span className="text-indigo-500">.</span>
-                    </span>
+                    <img
+                        src={Logo}
+                        alt="Logo"
+                        className="h-10 w-auto object-contain hover:scale-110 transition-transform duration-300"
+                    />
                 </div>
 
                 {/* Desktop Menu */}
@@ -31,9 +34,6 @@ const Navbar = () => {
                     <div className="p-2 rounded-full bg-white/5 hover:bg-white/10 cursor-pointer transition-colors text-white">
                         <BsSun size={18} />
                     </div>
-                    <button className="px-6 py-2 bg-indigo-600 text-white rounded-full text-sm font-semibold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/20 active:scale-95">
-                        Hire Me
-                    </button>
                 </div>
 
                 {/* Mobile Menu Icon */}
@@ -54,9 +54,6 @@ const Navbar = () => {
                     <a href="#skills" onClick={() => setMenuOpen(false)} className="text-white hover:text-indigo-500 transition-colors">Skills</a>
                     <a href="#projects" onClick={() => setMenuOpen(false)} className="text-white hover:text-indigo-500 transition-colors">Projects</a>
                     <a href="#contact" onClick={() => setMenuOpen(false)} className="text-indigo-500 transition-colors">Contact</a>
-                    <button className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold mt-2">
-                        Hire Me
-                    </button>
                 </div>
             )}
         </div>
