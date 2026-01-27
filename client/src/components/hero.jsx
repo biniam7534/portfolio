@@ -4,7 +4,7 @@ import HeroPic from '../assets/bina.jpg';
 
 const Hero = () => {
     return (
-        <section className='flex justify-around items-center p-10 space-x-10 lg:flex-row ssm:flex-col ssm:space-y-10 text-white min-h-[80vh]'>
+        <section id="home" className='flex justify-around items-center p-10 space-x-10 lg:flex-row ssm:flex-col ssm:space-y-10 text-white min-h-[80vh] pt-32'>
             {/* 1: Social Links Section */}
             <div className='flex flex-col space-y-6 ssm:flex-row ssm:space-y-0 ssm:space-x-6 lg:flex-col lg:space-x-0 lg:space-y-6'>
                 <a href="#" className='text-gray-400 hover:text-indigo-500 transition-all duration-300 transform hover:scale-125'>
