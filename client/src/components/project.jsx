@@ -66,7 +66,7 @@ const Project = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-black mb-4 tracking-tighter"
                     >
-                        FEATURED <span className="text-indigo-500">PROJECTS</span>
+                        MY <span className="text-indigo-500">PROJECTS</span>
                     </motion.h2>
                     <div className="w-24 h-1 bg-indigo-500 mx-auto rounded-full"></div>
                 </div>
