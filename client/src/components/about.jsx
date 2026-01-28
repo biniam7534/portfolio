@@ -33,12 +33,10 @@ const About = () => {
                     {/* Content Section */}
                     <div className='lg:w-1/2'>
                         <h3 className='text-2xl font-bold mb-6 text-indigo-400'>
-                            A Passionate Web Developer Dedicated to Crafting Exceptional Digital Experiences
+                            A Passionate Web Developer Crafting Exceptional Digital Experiences
                         </h3>
                         <p className='text-gray-400 text-lg leading-relaxed mb-8'>
-                            I am a detail-oriented web developer with a passion for building high-quality,
-                            user-centric applications. With a strong foundation in modern web technologies,
-                            I specialize in creating responsive designs and seamless user interfaces.
+                            I am a dedicated Computer Science student and aspiring full stack developer with a strong focus on web and backend development. I enjoy building real-world applications using HTML, CSS, JavaScript, React, Node.js, and Python, and I continuously sharpen my problem-solving skills while writing clean, efficient, and scalable code.
                         </p>
 
                         {/* Info Grid */}
