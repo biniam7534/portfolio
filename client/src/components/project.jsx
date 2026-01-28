@@ -10,6 +10,8 @@ import {
 import { motion } from 'framer-motion';
 import ECommerceImg from '../assets/E_commerce.png';
 import StudentMgmtImg from '../assets/student_manegment.png';
+import CampusSafetyImg from '../assets/campus-safety.png';
+
 
 
 
@@ -20,7 +22,8 @@ const projects = [
         subheading: "campus safety management",
         description: "A full-stack MERN-style application focused on real-world campus safety management, built with React, Node.js, Express, and MongoDB.",
         tags: ["React", "Node.js", "MongoDB", "Express"],
-        github: "https://github.com/biniam7534",
+        image: CampusSafetyImg,
+        github: "https://github.com/biniam7534/campus-safety-hub",
         demo: "#",
         color: "indigo"
     },
