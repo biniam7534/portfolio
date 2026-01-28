@@ -11,6 +11,8 @@ import { motion } from 'framer-motion';
 import ECommerceImg from '../assets/E_commerce.png';
 import StudentMgmtImg from '../assets/student_manegment.png';
 import CampusSafetyImg from '../assets/campus-safety.png';
+import CurrencyConverterImg from '../assets/currencyconverter.png';
+
 
 
 
@@ -55,7 +57,8 @@ const projects = [
         subheading: "Python Financial Utility",
         description: "Python-based currency converter that utilizes real-time exchange rates via API integration.",
         tags: ["Python", "API", "Finance"],
-        github: "https://github.com/biniam7534",
+        image: CurrencyConverterImg,
+        github: "https://github.com/biniam7534/Currency-converter-",
         demo: "#",
         color: "blue"
     }
