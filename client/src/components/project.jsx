@@ -4,48 +4,57 @@ import {
     GraduationCap,
     ShoppingCart,
     DollarSign,
-    ArrowRight
+    Github,
+    ExternalLink
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ECommerceImg from '../assets/E_commerce.png';
+import StudentMgmtImg from '../assets/student_manegment.png';
+
+
 
 const projects = [
     {
         id: 1,
         title: "Campus Safety Hub",
         subheading: "campus safety management",
-        description: "Campus Safety Hub is a full-stack MERN-style application focused on real-world campus safety management, built with React, Node.js, Express, and MongoDB.",
-        icon: <Map size={48} className="text-indigo-500" />,
+        description: "A full-stack MERN-style application focused on real-world campus safety management, built with React, Node.js, Express, and MongoDB.",
+        tags: ["React", "Node.js", "MongoDB", "Express"],
+        github: "https://github.com/biniam7534",
+        demo: "#",
         color: "indigo"
     },
     {
         id: 2,
-        title: "SCHOOL MANAGEMENT SYSTEM",
+        title: "School Management",
         subheading: "Java Swing & MySQL Application",
-        description: "A desktop-based school management system developed using Java Swing and JDBC. It enables structured collection of student personal and academic data through a multi-panel interface and securely stores records in a MySQL database.",
-        icon: <GraduationCap size={48} className="text-purple-500" />,
+        description: "A desktop-based school management system featuring structured student data collection and secure MySQL storage.",
+        tags: ["Java", "Swing", "MySQL", "JDBC"],
+        image: StudentMgmtImg,
+        github: "https://github.com/biniam7534/new_project",
+        demo: "#",
         color: "purple"
-
-
     },
     {
         id: 3,
         title: "E-Ecommerce",
-        subheading: "Frontend Shopping & Cart System",
-        description: "A responsive e-commerce web application built using HTML, CSS, and JavaScript. The project features product filtering, dynamic shopping cart management, checkout flow, and a simulated payment system with multiple payment options and success confirmation.",
-        icon: <ShoppingCart size={48} className="text-green-500" />,
+        subheading: "Frontend Shopping System",
+        description: "Responsive e-commerce application with product filtering, dynamic cart management, and simulated payment flow.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        image: ECommerceImg,
+        github: "https://github.com/biniam7534/Estore",
+        demo: "#",
         color: "green"
     },
-
     {
-
         id: 4,
         title: "Currency Converter",
-        subheading: "Python-Based Financial Utility",
-        description: "A Python-based currency converter application that allows users to convert amounts between different international currencies using real-time exchange rates. The project demonstrates core Python concepts, API integration, and accurate financial calculations.",
-        icon: <DollarSign size={48} className="text-blue-500" />,
+        subheading: "Python Financial Utility",
+        description: "Python-based currency converter that utilizes real-time exchange rates via API integration.",
+        tags: ["Python", "API", "Finance"],
+        github: "https://github.com/biniam7534",
+        demo: "#",
         color: "blue"
-
-
     }
 ];
 
@@ -59,19 +68,27 @@ const Project = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="text-center mb-20">
+                <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-black mb-4 tracking-tighter"
+                        className="text-4xl md:text-5xl font-black mb-4 tracking-tight"
                     >
-                        MY <span className="text-indigo-500">PROJECTS</span>
+                        My <span className="text-indigo-500">Projects</span>
                     </motion.h2>
-                    <div className="w-24 h-1 bg-indigo-500 mx-auto rounded-full"></div>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="text-gray-400 max-w-2xl mx-auto"
+                    >
+                        A showcase of my recent work
+                    </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.id}
@@ -79,34 +96,62 @@ const Project = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative bg-[#11121d] border border-white/5 rounded-3xl p-8 md:p-10 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(79,70,229,0.1)]"
+                            className="group bg-[#11121d] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-indigo-500/30 transition-all duration-500 flex flex-col"
                         >
-                            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-                                <div className="flex-1 text-center lg:text-left">
-                                    <span className="inline-block text-indigo-400 text-xs font-bold uppercase tracking-wider mb-3 px-3 py-1 bg-indigo-500/10 rounded-full">
-                                        {project.subheading}
-                                    </span>
-                                    <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">
-                                        {project.title}
-                                    </h3>
-                                    <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
-                                        {project.description}
-                                    </p>
-                                    <div className="flex items-center justify-center lg:justify-start gap-2 text-indigo-400 font-semibold group/link cursor-pointer hover:text-indigo-300 transition-colors">
-                                        <span>View Details</span>
-                                        <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
-                                    </div>
-                                </div>
-
-                                <div className="shrink-0">
-                                    <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-xl">
-                                        {project.icon}
-                                    </div>
-                                </div>
+                            {/* Photo Area */}
+                            <div className="h-52 bg-[#1a1b2e] w-full flex items-center justify-center relative overflow-hidden">
+                                {project.image ? (
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                ) : (
+                                    <>
+                                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent"></div>
+                                        <div className="w-16 h-1 bg-white/5 rounded-full"></div>
+                                    </>
+                                )}
                             </div>
 
-                            {/* Decorative accent */}
-                            <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            <div className="p-8 flex flex-col flex-1">
+                                <h3 className="text-2xl font-bold mb-3 group-hover:text-indigo-400 transition-colors">
+                                    {project.title}
+                                </h3>
+                                <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
+                                    {project.description}
+                                </p>
+
+                                <div className="flex flex-wrap gap-2 mb-8 mt-auto">
+                                    {project.tags.map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-wider text-gray-400 border border-white/5"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <div className="flex gap-4">
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 text-white rounded-2xl transition-all border border-white/10 text-sm font-semibold"
+                                    >
+                                        <Github size={18} />
+                                        Code
+                                    </a>
+                                    <a
+                                        href={project.demo}
+                                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl transition-all shadow-lg shadow-indigo-500/20 text-sm font-semibold"
+                                    >
+                                        <ExternalLink size={18} />
+                                        Demo
+                                    </a>
+                                </div>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
