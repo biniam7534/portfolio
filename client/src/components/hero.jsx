@@ -7,16 +7,16 @@ const Hero = () => {
         <section id="home" className='flex justify-around items-center p-10 space-x-10 lg:flex-row ssm:flex-col ssm:space-y-10 text-white min-h-[80vh] pt-32'>
             {/* 1: Social Links Section */}
             <div className='flex flex-col space-y-6 ssm:flex-row ssm:space-y-0 ssm:space-x-6 lg:flex-col lg:space-x-0 lg:space-y-6'>
-                <a href="https://www.facebook.com/share/19o1jPRNpq/" target="_blank" rel="noopener noreferrer" className='text-gray-400 hover:text-blue-600 transition-all duration-300 transform hover:scale-125'>
+                <a href="https://www.facebook.com/share/19o1jPRNpq/" target="_blank" rel="noopener noreferrer" className='text-gray-400 hover:text-indigo-500 transition-all duration-300 transform hover:scale-125'>
                     <BsFacebook size={28} />
                 </a>
-                <a href="https://t.me/bina_t30" target="_blank" rel="noopener noreferrer" className='text-gray-400 hover:text-sky-400 transition-all duration-300 transform hover:scale-125'>
+                <a href="https://t.me/bina_t30" target="_blank" rel="noopener noreferrer" className='text-gray-400 hover:text-sky-500 transition-all duration-300 transform hover:scale-125'>
                     <BsTelegram size={28} />
                 </a>
                 <a href="https://www.instagram.com/30_bin/" target="_blank" rel="noopener noreferrer" className='text-gray-400 hover:text-pink-500 transition-all duration-300 transform hover:scale-125'>
                     <BsInstagram size={28} />
                 </a>
-                <a href="https://www.linkedin.com/in/biniam-abu-a7a4b5395?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className='text-gray-400 hover:text-blue-700 transition-all duration-300 transform hover:scale-125'>
+                <a href="https://www.linkedin.com/in/biniam-abu-a7a4b5395?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className='text-gray-400 hover:text-blue-600 transition-all duration-300 transform hover:scale-125'>
                     <BsLinkedin size={28} />
                 </a>
             </div>

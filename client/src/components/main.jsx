@@ -1,5 +1,6 @@
 import Navbar from "./Navbar"
 import Hero from "./hero"
+import About from "./about"
 import Skills from "./skills"
 import Project from "./project"
 import Contact from "./contact"
@@ -10,6 +11,7 @@ const Main = () => {
         <main className="min-h-screen bg-[#0f172a] text-white">
             <Navbar />
             <Hero />
+            <About />
             <Skills />
             <Project />
             <Contact />
