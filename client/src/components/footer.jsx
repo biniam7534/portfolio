@@ -25,7 +25,7 @@ export default function Footer() {
                     {/* Center: Social Media Icons */}
                     <div className="flex items-center space-x-5">
                         <a
-                            href="https://github.com"
+                            href="https://github.com/biniam7534"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative"
@@ -36,7 +36,7 @@ export default function Footer() {
                             </div>
                         </a>
                         <a
-                            href="https://linkedin.com"
+                            href="https://www.linkedin.com/in/biniam-abu-a7a4b5395?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative"
