@@ -1,11 +1,25 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { BsSun } from 'react-icons/bs';
+import { BsSun, BsMoon } from 'react-icons/bs';
 import Logo from '../assets/logo.png';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+    useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+    };
 
     return (
         <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
@@ -26,13 +40,16 @@ const Navbar = () => {
                     <a href="#about" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">About</a>
                     <a href="#skills" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Skills</a>
                     <a href="#projects" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Projects</a>
-                    <a href="#contact" className="text-indigo-500 hover:text-indigo-400 text-sm font-medium transition-colors">Contact</a>
+                    <a href="#contact" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Contact</a>
                 </div>
 
                 {/* Right Side Actions */}
                 <div className="hidden lg:flex items-center space-x-4">
-                    <div className="p-2 rounded-full bg-white/5 hover:bg-white/10 cursor-pointer transition-colors text-white">
-                        <BsSun size={18} />
+                    <div
+                        onClick={toggleTheme}
+                        className="p-2 rounded-full bg-white/5 hover:bg-white/10 cursor-pointer transition-colors text-white"
+                    >
+                        {theme === 'dark' ? <BsSun size={18} /> : <BsMoon size={18} />}
                     </div>
                 </div>
 
@@ -47,12 +64,22 @@ const Navbar = () => {
             </nav>
 
             {/* Mobile Menu */}
-            {menuOpen && (
-                <div className="absolute top-full mt-4 left-0 w-full bg-[#11121d] border border-white/10 rounded-2xl flex flex-col p-6 space-y-4 lg:hidden shadow-2xl">
-                    <a href="#" onClick={() => setMenuOpen(false)} className="text-white hover:text-indigo-500 transition-colors">Home</a>
-                    <a href="#about" onClick={() => setMenuOpen(false)} className="text-white hover:text-indigo-500 transition-colors">About</a>
-                    <a href="#skills" onClick={() => setMenuOpen(false)} className="text-white hover:text-indigo-500 transition-colors">Skills</a>
-                    <a href="#projects" onClick={() => setMenuOpen(false)} className="text-white hover:text-indigo-500 transition-colors">Projects</a>
+            {theme === 'dark' && menuOpen && (
+                <div className="absolute top-full mt-4 left-0 w-full bg-[#11121d] border border-white/10 rounded-2xl flex flex-col p-6 space-y-4 lg:hidden shadow-2xl text-white">
+                    <a href="#" onClick={() => setMenuOpen(false)} className="hover:text-indigo-500 transition-colors">Home</a>
+                    <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-indigo-500 transition-colors">About</a>
+                    <a href="#skills" onClick={() => setMenuOpen(false)} className="hover:text-indigo-500 transition-colors">Skills</a>
+                    <a href="#projects" onClick={() => setMenuOpen(false)} className="hover:text-indigo-500 transition-colors">Projects</a>
+                    <a href="#contact" onClick={() => setMenuOpen(false)} className="text-indigo-500 transition-colors">Contact</a>
+                </div>
+            )}
+
+            {theme === 'light' && menuOpen && (
+                <div className="absolute top-full mt-4 left-0 w-full bg-white border border-gray-200 rounded-2xl flex flex-col p-6 space-y-4 lg:hidden shadow-2xl text-gray-800">
+                    <a href="#" onClick={() => setMenuOpen(false)} className="hover:text-indigo-500 transition-colors">Home</a>
+                    <a href="#about" onClick={() => setMenuOpen(false)} className="hover:text-indigo-500 transition-colors">About</a>
+                    <a href="#skills" onClick={() => setMenuOpen(false)} className="hover:text-indigo-500 transition-colors">Skills</a>
+                    <a href="#projects" onClick={() => setMenuOpen(false)} className="hover:text-indigo-500 transition-colors">Projects</a>
                     <a href="#contact" onClick={() => setMenuOpen(false)} className="text-indigo-500 transition-colors">Contact</a>
                 </div>
             )}

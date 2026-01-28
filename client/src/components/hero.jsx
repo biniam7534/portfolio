@@ -25,14 +25,14 @@ const Hero = () => {
             <div className='max-w-xl text-center lg:text-left'>
                 <h2 className='text-indigo-500 font-bold tracking-widest uppercase mb-4'>I'm a Developer</h2>
                 <h1 className='text-6xl font-black mb-6 leading-tight'>
-                    Hi, I'm <span className='bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent'>Biniam</span>
+                    Hi, I'm <span className='bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent'>Biniam Abu</span>
                 </h1>
                 <p className='text-gray-400 text-lg mb-8 leading-relaxed'>
                     Building modern, responsive, and highly interactive web applications that solve real-world problems.
                 </p>
-                <button className='px-10 py-4 bg-indigo-600 rounded-full font-bold text-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:-translate-y-1'>
+                <a href="#about" className='inline-block px-10 py-4 bg-indigo-600 rounded-full font-bold text-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transform hover:-translate-y-1'>
                     Show More...
-                </button>
+                </a>
             </div>
 
             {/* 3: Image Section */}
