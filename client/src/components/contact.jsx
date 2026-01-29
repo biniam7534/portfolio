@@ -9,28 +9,53 @@ export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [status, setStatus] = useState({ type: '', message: '' });
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         setStatus({ type: '', message: '' });
 
-        // Replace these with your own EmailJS values
-        const SERVICE_ID = 'service_your_id';
-        const TEMPLATE_ID = 'template_your_id';
-        const PUBLIC_KEY = 'your_public_key';
+        const formData = new FormData(form.current);
+        const data = {
+            first_name: formData.get('first_name'),
+            last_name: formData.get('last_name'),
+            user_email: formData.get('user_email'),
+            user_phone: formData.get('user_phone'),
+            message: formData.get('message'),
+        };
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-            .then((result) => {
-                setStatus({ type: 'success', message: 'Message sent successfully! I will get back to you soon.' });
-                form.current.reset();
-            }, (error) => {
-                setStatus({ type: 'error', message: 'Something went wrong. Please try again or email me directly.' });
-                console.error('EmailJS Error:', error.text);
-            })
-            .finally(() => {
-                setIsSubmitting(false);
+        try {
+            // Original EmailJS functionality
+            // Replace these with your own EmailJS values if you want to keep using EmailJS
+            const SERVICE_ID = 'service_your_id';
+            const TEMPLATE_ID = 'template_your_id';
+            const PUBLIC_KEY = 'your_public_key';
+
+            // Send to Backend
+            const backendResponse = await fetch('http://localhost:5000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
             });
+
+            if (!backendResponse.ok) {
+                throw new Error('Failed to save message to database');
+            }
+
+            // Optional: Also send email via EmailJS if configured
+            // await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY);
+
+            setStatus({ type: 'success', message: 'Message sent and saved successfully! I will get back to you soon.' });
+            form.current.reset();
+        } catch (error) {
+            console.error('Error:', error);
+            setStatus({ type: 'error', message: 'Something went wrong. Please try again or email me directly.' });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
+
 
     return (
         <section className="py-24 bg-[#0f172a] text-white" id="contact">
