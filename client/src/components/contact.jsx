@@ -31,7 +31,7 @@ export default function Contact() {
             const PUBLIC_KEY = 'your_public_key';
 
             // Send to Backend
-            const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+            const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://portfolio-server-e0xq.onrender.com';
             const backendResponse = await fetch(`${API_BASE_URL}/api/contact`, {
                 method: 'POST',
                 headers: {
