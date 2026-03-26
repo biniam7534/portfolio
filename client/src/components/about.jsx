@@ -1,5 +1,5 @@
 import AboutPic from '../assets/1.bnu.jpg';
-import CV from '../assets/cv.png';
+import CV from '../assets/cv.pdf';
 
 const About = () => {
     return (
@@ -63,7 +63,7 @@ const About = () => {
                         <div className='flex flex-wrap gap-4'>
                             <a
                                 href={CV}
-                                download="Biniam_Abu_CV.png"
+                                download="Biniam_Abu_CV.pdf"
                                 className='px-8 py-3 bg-indigo-600 rounded-lg font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/20 inline-block text-center'
                             >
                                 Download CV
