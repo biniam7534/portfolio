@@ -4,7 +4,7 @@ import Logo from '../assets/logo.png';
 
 export default function Footer() {
     return (
-        <footer className="bg-[#11121d] text-white py-12 border-t border-white/5">
+        <footer className="bg-secondary py-12 border-t border-white/5">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
@@ -30,9 +30,9 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className="group relative"
                         >
-                            <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-0 group-hover:opacity-40 transition duration-300"></div>
-                            <div className="relative bg-[#1a1b26] p-3 rounded-full border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 shadow-xl">
-                                <FaGithub size={20} className="text-gray-400 group-hover:text-white transition-colors" />
+                            <div className="absolute -inset-2 bg-gradient-to-r from-accent to-amber-600 rounded-full blur opacity-0 group-hover:opacity-40 transition duration-300"></div>
+                            <div className="relative bg-secondary p-3 rounded-full border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                                <FaGithub size={20} className="text-gray-400 group-hover:text-accent transition-colors" />
                             </div>
                         </a>
                         <a
@@ -41,9 +41,9 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className="group relative"
                         >
-                            <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-0 group-hover:opacity-40 transition duration-300"></div>
-                            <div className="relative bg-[#1a1b26] p-3 rounded-full border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 shadow-xl">
-                                <FaLinkedin size={20} className="text-gray-400 group-hover:text-white transition-colors" />
+                            <div className="absolute -inset-2 bg-gradient-to-r from-accent to-amber-600 rounded-full blur opacity-0 group-hover:opacity-40 transition duration-300"></div>
+                            <div className="relative bg-secondary p-3 rounded-full border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                                <FaLinkedin size={20} className="text-gray-400 group-hover:text-accent transition-colors" />
                             </div>
                         </a>
                         <a
@@ -52,9 +52,9 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className="group relative"
                         >
-                            <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-0 group-hover:opacity-40 transition duration-300"></div>
-                            <div className="relative bg-[#1a1b26] p-3 rounded-full border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 shadow-xl">
-                                <FaTwitter size={20} className="text-gray-400 group-hover:text-white transition-colors" />
+                            <div className="absolute -inset-2 bg-gradient-to-r from-accent to-amber-600 rounded-full blur opacity-0 group-hover:opacity-40 transition duration-300"></div>
+                            <div className="relative bg-secondary p-3 rounded-full border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-1 shadow-xl">
+                                <FaTwitter size={20} className="text-gray-400 group-hover:text-accent transition-colors" />
                             </div>
                         </a>
                     </div>

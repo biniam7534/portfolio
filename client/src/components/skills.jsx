@@ -19,7 +19,7 @@ const skills = [
 
 const Skills = () => {
     return (
-        <section className="py-24 bg-[#0a0a12] text-white" id="skills">
+        <section className="py-24" id="skills">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header */}
                 <div className="text-center mb-20">
@@ -29,7 +29,7 @@ const Skills = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-black mb-4 tracking-tight"
                     >
-                        My <span className="text-indigo-500">Skills</span>
+                        My <span className="text-accent">Skills</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -51,13 +51,13 @@ const Skills = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="group bg-[#11121d] border border-white/5 p-6 rounded-3xl hover:border-indigo-500/30 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(79,70,229,0.1)]"
+                            className="group bg-secondary/30 backdrop-blur-sm border border-white/5 p-6 rounded-3xl hover:border-accent/30 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(217,119,6,0.05)]"
                         >
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                                     {skill.icon}
                                 </div>
-                                <h3 className="text-xl font-bold group-hover:text-indigo-400 transition-colors uppercase tracking-wider text-sm">
+                                <h3 className="text-xl font-bold group-hover:text-accent transition-colors uppercase tracking-wider text-sm">
                                     {skill.name}
                                 </h3>
                             </div>
@@ -65,7 +65,7 @@ const Skills = () => {
                             <div className="space-y-4">
                                 <div className="flex justify-between items-center text-sm">
                                     <span className="text-gray-400 font-medium">Proficiency</span>
-                                    <span className="text-indigo-400 font-bold">{skill.level}</span>
+                                    <span className="text-accent font-bold">{skill.level}</span>
                                 </div>
 
                                 {/* Progress Bar Container */}
@@ -75,12 +75,12 @@ const Skills = () => {
                                         whileInView={{ width: skill.level }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 1, delay: 0.5 }}
-                                        className="h-full bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-full"
+                                        className="h-full bg-gradient-to-r from-accent to-amber-400 rounded-full"
                                     />
                                 </div>
 
                                 {/* Decorative Line */}
-                                <div className="w-12 h-[2px] bg-indigo-500/30 rounded-full group-hover:w-full transition-all duration-500"></div>
+                                <div className="w-12 h-[2px] bg-accent/30 rounded-full group-hover:w-full transition-all duration-500"></div>
                             </div>
                         </motion.div>
                     ))}

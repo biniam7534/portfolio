@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
     color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #0f172a;
+    --primary: #fafaf9;
+    --secondary: #f5f5f4;
+    --accent: #d97706;
+    --text-color: #0c0a09;
+    --bg-color: var(--primary);
+    --grid-color: rgba(0, 0, 0, 0.04);
+    --accent-glow: rgba(217, 119, 6, 0.04);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -15,8 +20,45 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.dark {
+    --primary: #0c0a09;
+    --secondary: #1c1917;
+    --accent: #d97706;
+    --text-color: #f5f5f4;
+    --bg-color: var(--primary);
+    --grid-color: rgba(217, 119, 6, 0.05);
+    --accent-glow: rgba(217, 119, 6, 0.15);
+}
+
 body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    background-image:
+        linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 50% 0%, var(--accent-glow) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, var(--accent-glow) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+* {
+    scroll-behavior: smooth;
 }

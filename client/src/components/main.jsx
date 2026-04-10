@@ -8,7 +8,7 @@ import Footer from "./footer"
 
 const Main = () => {
     return (
-        <main className="min-h-screen bg-[#0f172a] text-white">
+        <main className="min-h-screen selection:bg-accent selection:text-white">
             <Navbar />
             <Hero />
             <About />

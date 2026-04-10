@@ -66,11 +66,11 @@ const projects = [
 
 const Project = () => {
     return (
-        <section className="py-24 bg-[#0a0a12] text-white overflow-hidden relative" id="projects">
+        <section className="py-24 overflow-hidden relative" id="projects">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
-                <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px]"></div>
+                <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-accent/20 rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-amber-600/20 rounded-full blur-[120px]"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -81,7 +81,7 @@ const Project = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-black mb-4 tracking-tight"
                     >
-                        My <span className="text-indigo-500">Projects</span>
+                        My <span className="text-accent">Projects</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -102,10 +102,10 @@ const Project = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group bg-[#11121d] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-indigo-500/30 transition-all duration-500 flex flex-col"
+                            className="group bg-secondary/40 backdrop-blur-md border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-accent/30 transition-all duration-500 flex flex-col"
                         >
                             {/* Photo Area */}
-                            <div className="h-52 bg-[#1a1b2e] w-full flex items-center justify-center relative overflow-hidden">
+                            <div className="h-52 bg-secondary/60 w-full flex items-center justify-center relative overflow-hidden text-accent">
                                 {project.image ? (
                                     <img
                                         src={project.image}
@@ -114,14 +114,14 @@ const Project = () => {
                                     />
                                 ) : (
                                     <>
-                                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent"></div>
                                         <div className="w-16 h-1 bg-white/5 rounded-full"></div>
                                     </>
                                 )}
                             </div>
 
                             <div className="p-8 flex flex-col flex-1">
-                                <h3 className="text-2xl font-bold mb-3 group-hover:text-indigo-400 transition-colors">
+                                <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors">
                                     {project.title}
                                 </h3>
                                 <p className="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3">
@@ -151,7 +151,7 @@ const Project = () => {
                                     </a>
                                     <a
                                         href={project.demo}
-                                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl transition-all shadow-lg shadow-indigo-500/20 text-sm font-semibold"
+                                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-accent hover:brightness-110 text-black rounded-2xl transition-all shadow-lg shadow-accent/20 text-sm font-semibold"
                                     >
                                         <ExternalLink size={18} />
                                         Demo

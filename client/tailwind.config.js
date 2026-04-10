@@ -14,9 +14,10 @@ export default {
         },
         extend: {
             colors: {
-                primary: "#0f172a", // Slate 900
-                secondary: "#1e293b", // Slate 800
-                accent: "#38bdf8", // Sky 400
+                primary: "var(--primary)",
+                secondary: "var(--secondary)",
+                accent: "var(--accent)",
+                glow: "var(--accent-glow)",
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'], // Ensure Inter is loaded or fallback
