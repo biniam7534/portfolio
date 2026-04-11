@@ -30,7 +30,7 @@ const Hero = () => {
                 <p className='text-gray-400 text-lg mb-8 leading-relaxed'>
                     Building modern, responsive, and highly interactive web applications that solve real-world problems.
                 </p>
-                <a href="#about" className='inline-block px-10 py-4 bg-accent rounded-full font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-accent/20 hover:shadow-accent/40 transform hover:-translate-y-1 text-black'>
+                <a href="#about" className='inline-block px-10 py-4 bg-accent rounded-full font-bold text-lg hover:brightness-110 transition-all shadow-lg shadow-accent/20 hover:shadow-accent/40 transform hover:-translate-y-1 text-white'>
                     View Projects
                 </a>
             </div>

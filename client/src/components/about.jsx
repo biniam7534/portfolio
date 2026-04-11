@@ -27,7 +27,7 @@ const About = () => {
                         {/* Experience Card Overlay */}
                         <div className='absolute -bottom-6 -right-6 bg-secondary p-6 rounded-2xl shadow-xl border border-accent/20 ssm:hidden md:block'>
                             <p className='text-4xl font-bold text-accent'>1+</p>
-                            <p className='text-gray-400 text-sm'>Years Experience</p>
+                            <p className='opacity-60 text-sm'>Years Experience</p>
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@ const About = () => {
                             <a
                                 href={CV}
                                 download="Biniam_Abu_CV.pdf"
-                                className='px-8 py-3 bg-accent text-black rounded-lg font-bold hover:brightness-110 transition-all shadow-lg shadow-accent/20 inline-block text-center'
+                                className='px-8 py-3 bg-accent text-white rounded-lg font-bold hover:brightness-110 transition-all shadow-lg shadow-accent/20 inline-block text-center'
                             >
                                 Download CV
                             </a>
