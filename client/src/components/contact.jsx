@@ -24,14 +24,8 @@ export default function Contact() {
         };
 
         try {
-            // Original EmailJS functionality
-            // Replace these with your own EmailJS values if you want to keep using EmailJS
-            const SERVICE_ID = 'service_your_id';
-            const TEMPLATE_ID = 'template_your_id';
-            const PUBLIC_KEY = 'your_public_key';
-
             // Send to Backend
-            const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://portfolio-server-e0xq.onrender.com';
+            const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
             const backendResponse = await fetch(`${API_BASE_URL}/api/contact`, {
                 method: 'POST',
                 headers: {
@@ -40,18 +34,23 @@ export default function Contact() {
                 body: JSON.stringify(data),
             });
 
+            const result = await backendResponse.json().catch(() => ({}));
+
             if (!backendResponse.ok) {
-                throw new Error('Failed to save message to database');
+                throw new Error(result.error || 'Failed to send message');
             }
 
-            // Optional: Also send email via EmailJS if configured
-            // await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY);
-
-            setStatus({ type: 'success', message: 'Message sent and saved successfully! I will get back to you soon.' });
+            setStatus({
+                type: 'success',
+                message: result.message || 'Message sent and saved successfully!'
+            });
             form.current.reset();
         } catch (error) {
             console.error('Error:', error);
-            setStatus({ type: 'error', message: 'Something went wrong. Please try again or email me directly.' });
+            setStatus({
+                type: 'error',
+                message: error.message || 'Something went wrong. Please try again.'
+            });
         } finally {
             setIsSubmitting(false);
         }
@@ -82,27 +81,13 @@ export default function Contact() {
                     </motion.p>
                 </div>
 
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-                    {/* Left Column: Illustration */}
+                <div className="flex justify-center">
+                    {/* Centered Contact Form */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="flex-1 w-full max-w-lg"
-                    >
-                        <img
-                            src={Illustration}
-                            alt="Contact Illustration"
-                            className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(217,119,6,0.3)] transition-transform duration-500 hover:scale-105"
-                        />
-                    </motion.div>
-
-                    {/* Right Column: Contact Form */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="flex-1 w-full max-w-xl bg-secondary/50 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] border border-white/5 shadow-2xl relative overflow-hidden"
+                        className="w-full max-w-2xl bg-secondary/50 backdrop-blur-md p-8 md:p-10 rounded-[2.5rem] border border-white/5 shadow-2xl relative overflow-hidden"
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 blur-3xl rounded-full"></div>
 
@@ -167,7 +152,7 @@ export default function Contact() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className={`w-full py-5 bg-gradient-to-r from-accent to-amber-600 hover:brightness-110 text-black rounded-2xl font-bold text-lg transition-all shadow-lg shadow-accent/20 active:scale-95 flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                                className={`w-full py-5 bg-gradient-to-r from-accent to-amber-600 hover:brightness-110 text-white rounded-2xl font-bold text-lg transition-all shadow-lg shadow-accent/20 active:scale-95 flex items-center justify-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                             >
                                 {isSubmitting ? (
                                     <>

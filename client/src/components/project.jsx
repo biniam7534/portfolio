@@ -156,7 +156,7 @@ const Project = () => {
                                     {project.tags.map((tag) => (
                                         <span
                                             key={tag}
-                                            className="px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold uppercase tracking-wider text-gray-400 border border-white/5"
+                                            className="px-3 py-1 bg-accent/10 rounded-full text-[10px] font-bold uppercase tracking-wider text-accent border border-accent/20"
                                         >
                                             {tag}
                                         </span>
@@ -168,14 +168,16 @@ const Project = () => {
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 text-white rounded-2xl transition-all border border-white/10 text-sm font-semibold"
+                                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-secondary hover:bg-white/5 text-white rounded-2xl transition-all border border-white/10 text-sm font-semibold"
                                     >
                                         <Github size={18} />
                                         Code
                                     </a>
                                     <a
                                         href={project.demo}
-                                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-accent hover:brightness-110 text-black rounded-2xl transition-all shadow-lg shadow-accent/20 text-sm font-semibold"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-1 flex items-center justify-center gap-2 py-3 bg-accent hover:brightness-110 text-white rounded-2xl transition-all shadow-lg shadow-accent/20 text-sm font-semibold"
                                     >
                                         <ExternalLink size={18} />
                                         Demo
