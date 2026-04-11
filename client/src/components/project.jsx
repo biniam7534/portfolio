@@ -12,6 +12,8 @@ import ECommerceImg from '../assets/E_commerce.png';
 import StudentMgmtImg from '../assets/student_manegment.png';
 import CampusSafetyImg from '../assets/campus-safety.png';
 import CurrencyConverterImg from '../assets/currencyconverter.png';
+import image1 from '../assets/image1.png';
+import image2 from '../assets/image2.png';
 
 
 
@@ -20,6 +22,28 @@ import CurrencyConverterImg from '../assets/currencyconverter.png';
 const projects = [
     {
         id: 1,
+        title: "Book Store",
+        subheading: "Book Store Mern Stack",
+        description: "A feature-rich full-stack bookstore application built with the MERN stack (MongoDB, Express, React, Node.js) that offers a seamless shopping and book management experience.",
+        tags: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express"],
+        image: image1,
+        github: "https://github.com/biniam7534/book_store_mern",
+        demo: "https://book-store-mern-bookstore-git-main-biniams-projects-10d37b10.vercel.app/",
+        color: "indigo"
+    },
+    {
+        id: 2,
+        title: "Digital Heritage Vault",
+        subheading: "Digital Heritage Vault Mern Stack",
+        description: "Digital Heritage Vault is an immersive, modern digital platform designed to preserve, manage, and explore global cultural heritage through advanced archival technology and interactive historical experiences.",
+        tags: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express"],
+        image: image2,
+        github: "https://github.com/biniam7534/digital-heritage-vault",
+        demo: "https://digital-heritage-vault.vercel.app/",
+        color: "purple"
+    },
+    {
+        id: 3,
         title: "Campus Safety Hub",
         subheading: "campus safety management",
         description: "A full-stack MERN-style application focused on real-world campus safety management, built with React, Node.js, Express, and MongoDB.",
@@ -30,7 +54,7 @@ const projects = [
         color: "indigo"
     },
     {
-        id: 2,
+        id: 4,
         title: "School Management",
         subheading: "Java Swing & MySQL Application",
         description: "A desktop-based school management system featuring structured student data collection and secure MySQL storage.",
@@ -41,7 +65,7 @@ const projects = [
         color: "purple"
     },
     {
-        id: 3,
+        id: 5,
         title: "E-Ecommerce",
         subheading: "Frontend Shopping System",
         description: "Responsive e-commerce application with product filtering, dynamic cart management, and simulated payment flow.",
@@ -52,7 +76,7 @@ const projects = [
         color: "green"
     },
     {
-        id: 4,
+        id: 6,
         title: "Currency Converter",
         subheading: "Python Financial Utility",
         description: "Python-based currency converter that utilizes real-time exchange rates via API integration.",

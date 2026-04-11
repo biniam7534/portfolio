@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-accent: var(--accent);
+    --color-glow: var(--accent-glow);
+}
+
 :root {
     font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.5;
@@ -7,12 +14,12 @@
 
     color-scheme: light dark;
     --primary: #fafaf9;
-    --secondary: #f5f5f4;
+    --secondary: #e7e5e4;
     --accent: #f97316;
     --text-color: #0c0a09;
     --bg-color: var(--primary);
     --grid-color: rgba(0, 0, 0, 0.04);
-    --accent-glow: rgba(249, 115, 22, 0.05);
+    --accent-glow: rgba(249, 115, 22, 0.06);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
