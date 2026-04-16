@@ -1,8 +1,8 @@
 
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
-import Illustration from '../assets/contact_me_custom.png';
+
+
 
 export default function Contact() {
     const form = useRef();
