@@ -43,15 +43,15 @@ const projects = [
         color: "purple"
     },
     {
-        id: 3,
-        title: "Campus Safety Hub",
-        subheading: "campus safety management",
-        description: "A full-stack MERN-style application focused on real-world campus safety management, built with React, Node.js, Express, and MongoDB.",
-        tags: ["React", "Node.js", "MongoDB", "Express"],
-        image: CampusSafetyImg,
-        github: "https://github.com/biniam7534/campus-safety-hub",
-        demo: "#",
-        color: "indigo"
+        id: 5,
+        title: "E-Ecommerce",
+        subheading: "Frontend Shopping System",
+        description: "Responsive e-commerce application with product filtering, dynamic cart management, and simulated payment flow.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        image: ECommerceImg,
+        github: "https://github.com/biniam7534/Estore",
+        demo: "https://estore-three-psi.vercel.app/",
+        color: "green"
     },
     {
         id: 4,
@@ -65,15 +65,16 @@ const projects = [
         color: "purple"
     },
     {
-        id: 5,
-        title: "E-Ecommerce",
-        subheading: "Frontend Shopping System",
-        description: "Responsive e-commerce application with product filtering, dynamic cart management, and simulated payment flow.",
-        tags: ["HTML", "CSS", "JavaScript"],
-        image: ECommerceImg,
-        github: "https://github.com/biniam7534/Estore",
+        id: 3,
+        title: "Campus Safety Hub",
+        subheading: "campus safety management",
+        description: "A full-stack MERN-style application focused on real-world campus safety management, built with React, Node.js, Express, and MongoDB.",
+        tags: ["React", "Node.js", "MongoDB", "Express"],
+        image: CampusSafetyImg,
+        github: "https://github.com/biniam7534/campus-safety-hub",
         demo: "#",
-        color: "green"
+        color: "indigo"
+
     },
     {
         id: 6,
