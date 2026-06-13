@@ -3,6 +3,7 @@ import Hero from "./hero"
 import About from "./about"
 import Skills from "./skills"
 import Project from "./project"
+import Certificates from "./certificates"
 import Contact from "./contact"
 import Footer from "./footer"
 
@@ -14,6 +15,7 @@ const Main = () => {
             <About />
             <Skills />
             <Project />
+            <Certificates />
             <Contact />
             <Footer />
         </main>

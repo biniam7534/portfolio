@@ -46,7 +46,7 @@ const projects = [
         id: 5,
         title: "E-Ecommerce",
         subheading: "Frontend Shopping System",
-        description: "E-commerce is a full-stack application built with HTML, CSS, Node.js, MongoDB, and Express.js ",
+        description: "E-ecommerce is a full-stack application built with HTML, CSS, Node.js, MongoDB, and Express.js ",
         tags: ["HTML", "CSS", "Node.js", "MongoDB", "Express"],
         image: ECommerceImg,
         github: "https://github.com/biniam7534/Estore",

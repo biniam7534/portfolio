@@ -40,6 +40,7 @@ const Navbar = () => {
                     <a href="#about" className="text-gray-400 hover:text-accent text-sm font-medium transition-colors">About</a>
                     <a href="#skills" className="text-gray-400 hover:text-accent text-sm font-medium transition-colors">Skills</a>
                     <a href="#projects" className="text-gray-400 hover:text-accent text-sm font-medium transition-colors">Projects</a>
+                    <a href="#certificates" className="text-gray-400 hover:text-accent text-sm font-medium transition-colors">Certificates</a>
                     <a href="#contact" className="text-gray-400 hover:text-accent text-sm font-medium transition-colors">Contact</a>
                 </div>
 
@@ -70,6 +71,7 @@ const Navbar = () => {
                     <a href="#about" onClick={() => setMenuOpen(false)} className="text-gray-400 hover:text-accent transition-colors">About</a>
                     <a href="#skills" onClick={() => setMenuOpen(false)} className="text-gray-400 hover:text-accent transition-colors">Skills</a>
                     <a href="#projects" onClick={() => setMenuOpen(false)} className="text-gray-400 hover:text-accent transition-colors">Projects</a>
+                    <a href="#certificates" onClick={() => setMenuOpen(false)} className="text-gray-400 hover:text-accent transition-colors">Certificates</a>
                     <a href="#contact" onClick={() => setMenuOpen(false)} className="text-accent transition-colors">Contact</a>
                 </div>
             )}
